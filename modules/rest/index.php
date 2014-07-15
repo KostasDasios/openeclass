@@ -10,6 +10,7 @@ $app->config('debug', true);
 error_reporting(E_ALL ^ E_DEPRECATED ^ E_NOTICE ^ E_WARNING);
 
 // Setup the REST routes
+require_once ('../../include/init.php');
 require_once (__DIR__.'/auth.php');
 $app->map('/login', RequestAccessToken)->via('POST');
 require_once (__DIR__.'/courses.php');
